@@ -14,6 +14,7 @@ fn main() {
 
     match folder_name {
         "" => println!("No valid argument provided. Please enter a folder name"),
+        "--help" => println!("Usage: collapse <folder_name> [--debug] [--help]"),
         _ => {
             let mut collapse = Collapse::new();
             collapse.handle_collapse(folder_name.to_string());
